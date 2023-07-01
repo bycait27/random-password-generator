@@ -12,6 +12,17 @@ function promptUser() {
 // Write password to the #password input
 function writePassword() {
   promptUser();
+  // the following object stores the character set and its properties 
+  const charSet = {
+    // holds a string of uppercase letters
+    upperCase: "ABCDEFGHIJKLMNOP",
+    // holds a string of lowercase letters
+    lowerCase: "abcdefghijklmnop",
+    // holds a string of numbers 0-9
+    numbers: "123456789",
+    // holds common special characters used in secure passwords
+    special: "~!@#$%^&* ()_-+="
+  }
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
