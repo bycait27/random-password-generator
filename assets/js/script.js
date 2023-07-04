@@ -13,36 +13,22 @@ function promptUser() {
     } else {
         alert(`You entered: ${passwordLength}.`);
     };
-  var passwordCase = prompt("Type whether you would like your password to be in lowercase or uppercase: ");
-    // this if..else statement makes sure the user input lowercase or uppercase
+  var passwordCharType = prompt("Which character type would you like to include in your password? Please type lowercase, uppercase, numeric, or special: ");
+    // this if..else statement makes sure the user input a character type
     // if this is true, their answer validated via an alert with their input displayed back to them
     // otherwise, the user will have to re-enter their input
-    if (passwordCase === "lowercase" || passwordCase === "uppercase") {
-      alert(`You entered: ${passwordCase}.`);
+    if (passwordCharType === "lowercase") {
+      alert(`You entered: ${passwordCharType}.`);
+    } else if (passwordCharType === "uppercase") {
+      alert(`You entered: ${passwordCharType}.`);
+    } else if (passwordCharType === "numeric") {
+      alert(`You entered: ${passwordCharType}.`);
+    } else if (passwordCharType === "special") {
+      alert(`You entered: ${passwordCharType}.`);
     } else {
-        alert("Please enter lowercase or uppercase.");
-      // make the browser prompt the question again
-    };
-  var characterNum = prompt("Type the numbers you would like to include in your password: ");
-    // this if..else statement makes sure the user input is a number between 0 and 9
-    // if this is true, their answer validated via an alert with their input displayed back to them
-    // otherwise, the user will have to re-enter their input
-    if (characterNum < 0 || characterNum > 9 || characterNum === "") {
-      alert("Please enter a number between 0 and 9.");
-      // make the browser prompt the question again
-    } else {
-        alert(`You entered: ${characterNum}.`);
-    };
-  var specialChar = prompt("Type any special characters you would like to include in your password: ");
-    // this if..else statement makes sure the user input matches the special character criteria
-    // if this is true, their answer validated via an alert with their input displayed back to them
-    // otherwise, the user will have to re-enter their input
-    if (specialChar === "~" || specialChar === "!" || specialChar === "@" || specialChar === "#" || specialChar === "$" || specialChar === "%" || specialChar === "^" || specialChar === "&" || specialChar === "*" || specialChar === "(" || specialChar === ")" || specialChar === "_" || specialChar === "-" || specialChar === "+" || specialChar === "=") {
-      alert(`You entered: ${specialChar}.`);
-    } else {
-    alert("Please enter a character or multiple characters from the following: ~!@#$%^&*()_-+=.");
-    // make the browser prompt the question again
-    };
+      alert("Please enter a character type.");
+      // prompt user again
+    }
   };
 
 // Write password to the #password input
