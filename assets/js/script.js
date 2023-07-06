@@ -13,22 +13,15 @@ function promptUser() {
     } else {
         alert(`You entered: ${passwordLength}.`);
     };
-  var passwordCharType = prompt("Which character type would you like to include in your password? Please type lowercase, uppercase, numeric, or special: ");
-    // this if..else statement makes sure the user input a character type
-    // if this is true, their answer validated via an alert with their input displayed back to them
-    // otherwise, the user will have to re-enter their input
-    if (passwordCharType === "lowercase") {
-      alert(`You entered: ${passwordCharType}.`);
-    } else if (passwordCharType === "uppercase") {
-      alert(`You entered: ${passwordCharType}.`);
-    } else if (passwordCharType === "numeric") {
-      alert(`You entered: ${passwordCharType}.`);
-    } else if (passwordCharType === "special") {
-      alert(`You entered: ${passwordCharType}.`);
-    } else {
-      alert("Please enter a character type.");
-      // prompt user again
-    }
+  // makes the user confirm whether or not they want lowercase letters in their password
+  var passwordLowerCase = confirm("Do you want your password to include lowercase characters?");
+  // makes the user confirm whether or not they want uppercase letters in their password
+  var passwordUpperCase = confirm("Do you want your password to include uppercase characters?");
+  // makes the user confirm whether or not they want numbers in their password
+  var passswordNumeric = confirm("Do you want your password to include numeric characters?");
+  // makes the user confirm whether or not they want special characters in their password
+  var passwordSpecial = confirm("Do you want your password to include special characters?");
+  
   };
 
 // Write password to the #password input
