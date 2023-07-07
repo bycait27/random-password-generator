@@ -34,22 +34,27 @@ function generatePassword() {
   var wantsNumeric = confirm("Do you want your password to include numeric characters?");
   // makes the user confirm whether or not they want special characters in their password
   var wantsSpecial = confirm("Do you want your password to include special characters?");
-  
+
+  // adds the contents of upperCase to the empty newPassword string if user says yes to this confirm statement
   if (wantsUpperCase === true) {
     newPassword += upperCase;
   };
+  // adds the contents of lowerCase to the empty newPassword string if user says yes to this confirm statement
   if (wantsLowerCase === true) {
     newPassword += lowerCase;
   };
+  // adds the contents of numbers to the empty newPassword string if user says yes to this confirm statement
   if (wantsNumeric === true) {
     newPassword += numbers;
   };
+  // adds the contents of special to the empty newPassword string if user says yes to this confirm statement
   if (wantsSpecial === true) {
     newPassword += special;
   };
   };
 
 function createPassword() {
+  // this for loop iterates through the length of the user's passwordLength input and makes a random string from the characters
   for (i = 0; i < passwordLength; i++) {
     var passwordFinal = newPassword.charAt(Math.floor(Math.random() * newPassword.length));
   };
@@ -57,11 +62,14 @@ function createPassword() {
 
 // Write password to the #password input
 function writePassword() {
+  // calls generatePassword function
   generatePassword();
-
-var password = createPassword();
-var passwordText = document.querySelector("#password");
-passwordText.value = password;
+  // inputs the result of the createPassword function to the password variable
+  var password = createPassword();
+  //sets a variable for this element id
+  var passwordText = document.querySelector("#password");
+  // inputs the value of password variable into the text box
+  passwordText.value = password;
 }
 
 
